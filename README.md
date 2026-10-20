@@ -1,16 +1,86 @@
-# React + Vite
+# React Authentication Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple authentication interface built with React and Vite as a part of my frontend learning journey.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Login page
+- Registration page
+- Shared authentication state using React Context
+- Protected dashboard route
+- Navigation between pages using React Router
+- Responsive styling
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Vite
+- React Router
+- CSS
+- Git and GitHub
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/Zirwa12/react-auth-demo.git
+   ```
+
+2. Open the project directory:
+
+   ```bash
+   cd react-auth-demo
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## Project Structure
+
+```text
+src/
+├── context/
+│   └── AuthContext.jsx
+├── pages/
+│   ├── Dashboard.jsx
+│   ├── Login.jsx
+│   └── register.jsx
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## Learning Objectives
+
+This project helped me practise React components, shared state, routing, protected pages, and styling.
+
+## Important Note
+
+This is learning demo. Authentication is simulated in the browser; it does not provide real server-side authentication or secure password verification. It is not created for production use.
+
+## Creator
+
+**Zirwa12**
+
+GitHub: https://github.com/Zirwa12
