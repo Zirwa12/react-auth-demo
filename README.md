@@ -77,7 +77,7 @@ This project helped me practise React components, shared state, routing, protect
 
 ## Important Note
 
-This is learning demo. Authentication is simulated in the browser; it does not provide real server-side authentication or secure password verification. It is not created for production use.
+This is learning demo. Authentication is simulated in the browser; it does not provide real  authentication or secure password verification. It is not created for production use.
 
 ## Creator
 
