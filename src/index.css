@@ -1,0 +1,251 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #202344;
+}
+
+.auth-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.auth-welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  color: white;
+  background: linear-gradient(135deg, #283a66, #7c83fd);
+}
+
+.auth-welcome h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.auth-welcome p {
+  max-width: 340px;
+  line-height: 1.7;
+}
+
+.auth-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #f8f9ff;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 380px;
+}
+
+.auth-form h2 {
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.auth-form > p {
+  margin-bottom: 28px;
+  color: #686d85;
+  line-height: 1.6;
+}
+
+.auth-form label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d9dcef;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.auth-form button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #283a66;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background: #7c83fd;
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-switch a {
+  color: #5965d8;
+  font-weight: bold;
+}
+.form-message {
+  color: #283a66;
+  font-size: 14px;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.dashboard {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 32px;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard h1 {
+  color: #283a66;
+}
+
+.dashboard p {
+  line-height: 1.7;
+  color: #686d85;
+}
+
+.dashboard button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #283a66;
+  color: white;
+  cursor: pointer;
+}
+
+.dashboard button:hover {
+  background: #7c83fd;
+}
+
+@media (max-width: 700px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-welcome {
+    padding: 32px 24px;
+  }
+
+  .auth-welcome h1 {
+    font-size: 32px;
+  }
+
+  .auth-form-section {
+    padding: 32px 24px;
+  }
+}
+
+/* Gentle entrance for the form */
+.auth-form {
+  animation: formEnter 0.65s ease-out both;
+}
+
+.auth-welcome h1 {
+  letter-spacing: -1.2px;
+  animation: textEnter 0.7s ease-out both;
+}
+
+.auth-welcome p {
+  animation: textEnter 0.9s ease-out both;
+}
+
+/* A subtle glow when an input is selected */
+.auth-form input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #5965d8;
+  box-shadow: 0 0 0 3px rgba(89, 101, 216, 0.13);
+  background-color: #fff;
+}
+
+/* Button movement and colour transition */
+.auth-form button {
+  transition: background-color 0.25s ease,
+    transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(40, 58, 102, 0.18);
+}
+
+.auth-form button:active {
+  transform: translateY(0);
+}
+
+/* Gentle movement on the welcome panel */
+.auth-welcome {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-welcome::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -90px;
+  bottom: -100px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 28px rgba(255, 255, 255, 0.035),
+    0 0 0 58px rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+}
+
+@keyframes formEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .auth-form,
+  .auth-welcome h1,
+  .auth-welcome p {
+    animation: none;
+  }
+
+  .auth-form input,
+  .auth-form button {
+    transition: none;
+  }
+}
